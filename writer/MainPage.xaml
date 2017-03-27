@@ -1,0 +1,23 @@
+﻿<Page
+    x:Class="writer.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:writer"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid x:Name="writer" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,0,-128,0">
+        <FlyoutBase.AttachedFlyout>
+            <Flyout>
+                <Grid Height="100" Width="100"/>
+            </Flyout>
+        </FlyoutBase.AttachedFlyout>
+        <TextBox x:Name="md" HorizontalAlignment="Left" Margin="0,139,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="480" Width="231" InputScope="Text" AcceptsReturn="True" DataContextChanged="onchange" TextChanged="md_TextChanged" PlaceholderText="输入你的内容"/>
+        <TextBlock x:Name="count" HorizontalAlignment="Left" Margin="143,42,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top"/>
+        <WebView x:Name="web" HorizontalAlignment="Left" Height="480" Margin="236,135,0,0" VerticalAlignment="Top" Width="242"/>
+        <Button x:Name="save" Content="保存" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top" RenderTransformOrigin="7.691,2.118"/>
+        <Button x:Name="newMD" Content="新建" HorizontalAlignment="Left" Margin="274,42,0,0" VerticalAlignment="Top"/>
+        <Button Content="打开" HorizontalAlignment="Left" Margin="369,42,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Page>
